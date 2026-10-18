@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCC HR Consulting | Fractional HR Services</title>
+<meta name="description" content="SCC HR Consulting provides fractional HR leadership and support for growing businesses in Singapore, with over 20 years of experience.">
+<style>
+  :root {
+    --text: #1d1d1f;
+    --muted: #6e6e73;
+    --line: #d2d2d7;
+    --soft: #f5f5f7;
+    --accent: #0071e3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    background: #ffffff;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 96px 0; border-top: 1px solid var(--line); }
+  section:first-of-type { border-top: none; }
+
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .logo { font-weight: 600; font-size: 17px; letter-spacing: -0.01em; color: var(--text); text-decoration: none; }
+  nav ul { display: flex; gap: 28px; list-style: none; }
+  nav a { font-size: 13px; color: var(--text); text-decoration: none; opacity: 0.8; }
+  nav a:hover { opacity: 1; }
+
+  .hero { padding: 140px 0 120px; text-align: center; }
+  .eyebrow { font-size: 17px; color: var(--muted); margin-bottom: 12px; font-weight: 500; }
+  h1 {
+    font-size: clamp(44px, 7vw, 76px);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+    margin-bottom: 24px;
+  }
+  .lead {
+    font-size: clamp(19px, 2.2vw, 24px);
+    color: var(--muted);
+    max-width: 680px;
+    margin: 0 auto 40px;
+    letter-spacing: -0.01em;
+  }
+  .btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 14px 26px; border-radius: 980px;
+    font-size: 17px; text-decoration: none; transition: opacity .2s;
+  }
+  .btn:hover { opacity: 0.85; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-link { color: var(--accent); }
+
+  h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .sub { font-size: 19px; color: var(--muted); max-width: 640px; margin-bottom: 56px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+  .card {
+    background: var(--soft);
+    border-radius: 20px;
+    padding: 36px 32px;
+  }
+  .card h3 { font-size: 21px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 10px; }
+  .card p { font-size: 16px; color: var(--muted); }
+
+  .plans .card { background: #fff; border: 1px solid var(--line); }
+  .plan-tag { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+  .plan-price { font-size: 17px; font-weight: 500; color: var(--text); margin: 16px 0 20px; }
+  .plans ul { list-style: none; margin-top: 8px; }
+  .plans li { font-size: 16px; color: var(--muted); padding: 8px 0; border-top: 1px solid var(--line); }
+
+  .experience {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+  }
+  .stat { font-size: clamp(80px, 12vw, 140px); font-weight: 600; letter-spacing: -0.05em; line-height: 1; }
+  .stat-label { font-size: 21px; color: var(--muted); margin-top: 8px; letter-spacing: -0.01em; }
+  .experience p { font-size: 19px; color: var(--muted); margin-bottom: 18px; }
+
+  form { display: grid; gap: 14px; max-width: 560px; margin: 0 auto; }
+  input, textarea, select {
+    font: inherit; font-size: 17px; color: var(--text);
+    padding: 16px 18px; border: 1px solid var(--line); border-radius: 14px;
+    background: #fff; width: 100%;
+  }
+  input:focus, textarea:focus, select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px rgba(0,113,227,0.15); }
+  textarea { min-height: 130px; resize: vertical; }
+  form .btn { justify-self: center; border: none; cursor: pointer; font-family: inherit; }
+  .contact-head { text-align: center; }
+  .contact-head .sub { margin: 0 auto 48px; }
+
+  footer { border-top: 1px solid var(--line); padding: 32px 0; font-size: 13px; color: var(--muted); text-align: center; }
+
+  @media (max-width: 760px) {
+    section { padding: 72px 0; }
+    .hero { padding: 96px 0 80px; }
+    nav ul { gap: 16px; }
+    nav a { font-size: 12px; }
+    .experience { grid-template-columns: 1fr; gap: 32px; }
+  }
+  @media (max-width: 480px) {
+    nav ul li:nth-child(n+3) { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">SCC HR Consulting</a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">SCC HR Consulting</p>
+    <h1>Senior HR expertise,<br>when you need it.</h1>
+    <p class="lead">Fractional HR leadership and support for growing businesses in Singapore. Experienced guidance without the cost of a full-time hire.</p>
+    <div class="btns">
+      <a href="#contact" class="btn btn-primary">Get in touch</a>
+      <a href="#services" class="btn btn-link">Explore services →</a>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <h2>Services</h2>
+    <p class="sub">Flexible HR support, tailored to where your business is today.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Fractional HR leadership</h3>
+        <p>Strategic guidance on people policies, organisational design, and workforce planning, led by an experienced HR professional.</p>
+      </div>
+      <div class="card">
+        <h3>Employment compliance</h3>
+        <p>Support with Singapore employment law, employment contracts, handbooks, and Ministry of Manpower requirements.</p>
+      </div>
+      <div class="card">
+        <h3>Recruitment and onboarding</h3>
+        <p>Hiring process design, interview support, work pass guidance, and structured onboarding for new team members.</p>
+      </div>
+      <div class="card">
+        <h3>Performance and reward</h3>
+        <p>Performance review frameworks, compensation benchmarking, and employee development planning.</p>
+      </div>
+      <div class="card">
+        <h3>Employee relations</h3>
+        <p>Guidance on workplace issues, disciplinary processes, and investigations handled fairly and consistently.</p>
+      </div>
+      <div class="card">
+        <h3>HR setup for growing companies</h3>
+        <p>Building the foundations: policies, processes, payroll coordination, and HR systems for a business that is scaling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="packages" class="plans">
+  <div class="wrap">
+    <h2>Ways to work together</h2>
+    <p class="sub">Choose the arrangement that suits your business. Every engagement is scoped to your needs.</p>
+    <div class="grid">
+      <div class="card">
+        <p class="plan-tag">Flexible</p>
+        <h3>Ad hoc support</h3>
+        <p class="plan-price">Quoted per engagement</p>
+        <ul>
+          <li>Hourly consultation</li>
+          <li>One-off policy reviews</li>
+          <li>Specific HR queries</li>
+        </ul>
+      </div>
+      <div class="card">
+        <p class="plan-tag">Most popular</p>
+        <h3>Monthly retainer</h3>
+        <p class="plan-price">Quoted per month</p>
+        <ul>
+          <li>Set number of hours each month</li>
+          <li>Ongoing HR leadership</li>
+          <li>Priority access and advice</li>
+        </ul>
+      </div>
+      <div class="card">
+        <p class="plan-tag">Defined scope</p>
+        <h3>Project work</h3>
+        <p class="plan-price">Fixed fee</p>
+        <ul>
+          <li>Handbook creation</li>
+          <li>HR setup and system review</li>
+          <li>Compensation or restructuring review</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap experience">
+    <div>
+      <div class="stat">20+</div>
+      <div class="stat-label">Years of HR experience</div>
+    </div>
+    <div>
+      <h2>Experience you can rely on.</h2>
+      <p>SCC HR Consulting brings over two decades of HR practice to businesses that need clear, practical advice. From early-stage companies to established organisations, we help you build people practices that work.</p>
+      <p>We keep our approach straightforward: understand your business, give honest advice, and support your team in following through.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-head">
+      <h2>Let's talk.</h2>
+      <p class="sub">Tell us a little about your business and what you need. We will get back to you to arrange a conversation.</p>
+    </div>
+    <form action="mailto:hello@example.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Email address" required>
+      <input type="text" name="company" placeholder="Company name">
+      <select name="interest">
+        <option value="" disabled selected>What do you need help with?</option>
+        <option>Fractional HR leadership</option>
+        <option>Employment compliance</option>
+        <option>Recruitment and onboarding</option>
+        <option>Performance and reward</option>
+        <option>Employee relations</option>
+        <option>HR setup</option>
+        <option>Other</option>
+      </select>
+      <textarea name="message" placeholder="Tell us more about your business"></textarea>
+      <button type="submit" class="btn btn-primary">Send message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© SCC HR Consulting. Singapore.</p>
+  </div>
+</footer>
+
+</body>
+</html>
+

@@ -119,6 +119,15 @@
   @media (max-width: 480px) {
     nav ul li:nth-child(n+3) { display: none; }
   }
+  .faq details { border-top: 1px solid var(--line); padding: 22px 0; }
+  .faq details:last-child { border-bottom: 1px solid var(--line); }
+  .faq summary { font-size: 19px; font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; letter-spacing: -0.01em; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; font-size: 24px; color: var(--muted); }
+  .faq details[open] summary::after { content: "–"; }
+  .faq details p { margin-top: 14px; font-size: 17px; color: var(--muted); max-width: 760px; }
+  .price-note { font-size: 13px; color: var(--muted); margin-top: 8px; }
+  .featured { border: 2px solid var(--accent) !important; }
 </style>
 </head>
 <body>
@@ -233,7 +242,110 @@
     </div>
   </div>
 </section>
+<section id="benefits">
+  <div class="wrap">
+    <h2>Why retain an HR partner?</h2>
+    <p class="sub">Senior HR support on a predictable monthly basis, without the cost of a full-time hire.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Expert guidance on demand</h3>
+        <p>Get practical HR advice when a decision comes up, from someone with over 20 years of experience.</p>
+      </div>
+      <div class="card">
+        <h3>Predictable costs</h3>
+        <p>A fixed monthly fee replaces unplanned consultant bills and the overheads of a full HR team.</p>
+      </div>
+      <div class="card">
+        <h3>Confidence in compliance</h3>
+        <p>Stay on top of Singapore employment law and Ministry of Manpower requirements.</p>
+      </div>
+      <div class="card">
+        <h3>Flexible as you grow</h3>
+        <p>Scale your support up or down as your headcount and needs change.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section id="plans" class="plans">
+  <div class="wrap">
+    <h2>Choose a plan</h2>
+    <p class="sub">Pick the package that fits your business today. We can always adjust it as you grow.</p>
+    <div class="grid">
+      <div class="card">
+        <p class="plan-tag">Starter</p>
+        <h3>Essentials</h3>
+        <p class="plan-price">Monthly fee: quoted on request</p>
+        <p class="price-note">Ideal for small businesses with immediate HR needs</p>
+        <ul>
+          <li>Approximately 4 hours per month</li>
+          <li>Policies and employment contracts</li>
+          <li>Onboarding and offboarding support</li>
+          <li>Compliance guidance</li>
+        </ul>
+      </div>
+      <div class="card featured">
+        <p class="plan-tag">Most popular</p>
+        <h3>Growth</h3>
+        <p class="plan-price">Monthly fee: quoted on request</p>
+        <p class="price-note">Ideal for growing teams</p>
+        <ul>
+          <li>Approximately 8 hours per month</li>
+          <li>Everything in Essentials</li>
+          <li>Employee handbook</li>
+          <li>Compensation and benefits review</li>
+          <li>Performance management framework</li>
+        </ul>
+      </div>
+      <div class="card">
+        <p class="plan-tag">Tailored</p>
+        <h3>Custom</h3>
+        <p class="plan-price">Quoted to your needs</p>
+        <p class="price-note">For businesses with specific goals</p>
+        <ul>
+          <li>Flexible hours</li>
+          <li>Everything in Growth</li>
+          <li>Succession and workforce planning</li>
+          <li>Leadership development support</li>
+        </ul>
+      </div>
+    </div>
+    <p class="sub" style="margin-top:40px;margin-bottom:0;">Pay for three months upfront and receive a discount. No set-up fee.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Frequently asked questions</h2>
+    <p class="sub">Answers to the questions clients ask most often.</p>
+    <div class="faq">
+      <details>
+        <summary>Who is a retainer suitable for?</summary>
+        <p>Small and medium businesses without a full HR team, companies entering Singapore, and organisations growing quickly and needing HR support on a regular basis.</p>
+      </details>
+      <details>
+        <summary>How does it work?</summary>
+        <p>Get in touch through the contact form. We arrange a consultation to understand your needs, agree on the right package and payment terms, and then begin.</p>
+      </details>
+      <details>
+        <summary>Can I change my plan?</summary>
+        <p>Yes. You can upgrade or downgrade from one month to the next. Most arrangements have a minimum commitment of three months.</p>
+      </details>
+      <details>
+        <summary>Will I have a dedicated contact?</summary>
+        <p>Yes. You will have one main point of contact who gets to know your business and manages your requests.</p>
+      </details>
+      <details>
+        <summary>When am I billed?</summary>
+        <p>Fees are invoiced in advance for the following month.</p>
+      </details>
+      <details>
+        <summary>Are there any extra costs?</summary>
+        <p>There is no set-up fee. Software, tools, and any additional services are quoted separately if needed.</p>
+      </details>
+    </div>
+  </div>
+</section>
 <section id="contact">
   <div class="wrap">
     <div class="contact-head">
